@@ -62,13 +62,11 @@ var App = React.createClass({
   },
 
   _onDeleteButtonClick: function() {
-    for (var key in this.state.items) {
-      if (key !== '.key' && key !== '.value') {
-        if (this.state.items[key].done === true) {
-          this.fb.child(key).remove();
-        }
+    this.state.items.forEach(function(e) {
+      if (e.done) {
+        this.fb.child(e['.key']).remove();
       }
-    }
+    }, this);
   }
 });
 

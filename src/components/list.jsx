@@ -15,20 +15,15 @@ module.exports = React.createClass({
     } else {
       var todos = [];
 
-      for (var key in this.props.items) {
-        if (key !== '.key' && key !== '.value') {
-          var item = this.props.items[key];
-          item.key = key;
-
-          todos.push(
-            <TodoItem
-              item={item}
-              key={key}
-              >
-            </TodoItem>
-          );
-        }
-      }
+      this.props.items.forEach(function(item) {
+        todos.push(
+          <TodoItem
+            item={item}
+            key={item['.key']}
+            >
+          </TodoItem>
+        );
+      }, this);
 
       return todos;
     }

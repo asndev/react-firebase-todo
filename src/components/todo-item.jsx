@@ -14,7 +14,7 @@ module.exports = React.createClass({
   },
 
   componentWillMount: function() {
-    this.fb = new Firebase(fbUrl + '/items/' + this.props.item.key);
+    this.fb = new Firebase(fbUrl + '/todo-items/' + this.props.item['.key']);
   },
 
   render: function() {
