@@ -18,7 +18,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return <div className='item-group'>
+    return <div className='input-group'>
       <span className='input-group-addon'>
         <input
           type='checkbox'
@@ -26,6 +26,7 @@ module.exports = React.createClass({
           onChange={this._onCheckboxChange}
         />
       </span>
+
       <input type='text'
         disabled={this.state.done}
         className='form-control'
