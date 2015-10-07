@@ -8,4 +8,4 @@ var App = React.createClass({
 
 var element = React.createElement(App, {});
 
-React.render(element, document.querySelector('#mainApp'));
+React.render(element, document.querySelector('.todoapp'));
