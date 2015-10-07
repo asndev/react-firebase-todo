@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hknd/react-firebase-todo",
   "dependencies": {
     "browserify": "^11.2.0",
+    "firebase": "^2.3.1",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-react": "^3.0.1",
@@ -27,6 +28,7 @@
     "gulp-watch": "^4.3.5",
     "node-notifier": "^4.3.1",
     "react": "^0.13.3",
+    "reactfire": "^0.5.1",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"
