@@ -1,6 +1,6 @@
 var browserify = require('browserify');
 var watchify = require('watchify');
-var reactify = require('reactify');
+var babelify = require('babelify');
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
@@ -31,7 +31,7 @@ var onError = function(err) {
 
 var bundler = watchify(browserify({
   entries: ['./src/app.jsx'],
-  transform: [reactify],
+  transform: [babelify],
   extensions: ['.jsx'],
   debug: true,
   cache: {},

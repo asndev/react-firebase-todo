@@ -4,8 +4,7 @@ var Firebase = require('firebase');
 var InputView = require('./components/input-view');
 var List = require('./components/list');
 
-var fbUrl = 'https://scorching-fire-4745.firebaseio.com/';
-
+const fbUrl = 'https://scorching-fire-4745.firebaseio.com/';
 
 var App = React.createClass({
   mixins: [ReactFire],
@@ -62,11 +61,11 @@ var App = React.createClass({
   },
 
   _onDeleteButtonClick: function() {
-    this.state.items.forEach(function(e) {
+    this.state.items.forEach(e => {
       if (e.done) {
         this.fb.child(e['.key']).remove();
       }
-    }, this);
+    });
   }
 });
 
