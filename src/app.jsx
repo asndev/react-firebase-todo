@@ -2,7 +2,7 @@ var React = require('react');
 var ReactFire = require('reactfire');
 var Firebase = require('firebase');
 var InputView = require('./components/input-view');
-var List = require('./components/list');
+import List from './components/list';
 
 const fbUrl = 'https://scorching-fire-4745.firebaseio.com/';
 

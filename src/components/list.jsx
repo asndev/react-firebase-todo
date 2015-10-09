@@ -1,7 +1,7 @@
 var React = require('react');
 var TodoItem = require('./todo-item');
 
-module.exports = React.createClass({
+export default React.createClass({
 
   render: function() {
     return <div>

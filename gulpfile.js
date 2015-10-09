@@ -21,11 +21,12 @@ var onError = function(err) {
 
   if (err.filename) {
     var fileArray = err.filename.split('/');
-    message += 'File: ' + fileArray[file.length - 1] + '\n';
+    message += 'File: ' + fileArray[fileArray.length - 1] + '\n';
   }
 
   if (err.lineNumber) { message += 'Line: ' + err.lineNumber + '\n' };
 
+  console.err(err);
   notifier.notify({ title: title, message: message });
 };
 
