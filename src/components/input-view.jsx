@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-module.exports = React.createClass({
+export default React.createClass({
 
   getInitialState: function() {
     return {
@@ -9,25 +9,25 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    return <div className="input-group">
+    return <div className='input-group'>
       <input
         value={this.state.text}
         onChange={this._onInputChange}
-        type="text"
-        className="form-control" />
-      <span className="input-group-btn">
+        type='text'
+        className='form-control' />
+      <span className='input-group-btn'>
         <button
           onClick={this._onAddClick}
-          className="btn btn-default"
-          type="button">
+          className='btn btn-default'
+          type='button'>
           Add
         </button>
       </span>
-    </div>
+    </div>;
   },
 
   _onInputChange: function(evt) {
-    this.setState({ text: evt.target.value });
+    this.setState({text: evt.target.value});
   },
 
   _onAddClick: function() {
@@ -36,7 +36,7 @@ module.exports = React.createClass({
       done: false
     });
 
-    this.setState({ text: '' });
+    this.setState({text: ''});
   }
 
 });

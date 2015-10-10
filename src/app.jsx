@@ -1,12 +1,12 @@
-var React = require('react');
-var ReactFire = require('reactfire');
-var Firebase = require('firebase');
-var InputView = require('./components/input-view');
+import React from 'react';
+import ReactFire from 'reactfire';
+import Firebase from 'firebase';
+import InputView from './components/input-view';
 import List from './components/list';
 
 const fbUrl = 'https://scorching-fire-4745.firebaseio.com/';
 
-var App = React.createClass({
+const App = React.createClass({
   mixins: [ReactFire],
 
   getInitialState: function() {
@@ -30,12 +30,12 @@ var App = React.createClass({
         </h2>
         <InputView itemsStore={this.firebaseRefs.items} />
         <hr/>
-        <div className={'content ' + (this.state.loaded ? 'loaded' : '' )}>
+        <div className={'content ' + (this.state.loaded ? 'loaded' : '')}>
           <List items={this.state.items} />
           {this._deleteButton()}
         </div>
       </div>
-    </div>
+    </div>;
   },
 
   _onLoaded: function() {
@@ -56,7 +56,7 @@ var App = React.createClass({
           className='btn btn-default'>
           Clear Completed
         </button>
-      </div>
+      </div>;
     }
   },
 
@@ -69,5 +69,5 @@ var App = React.createClass({
   }
 });
 
-var element = React.createElement(App, {});
+const element = React.createElement(App, {});
 React.render(element, document.querySelector('.todoapp'));

@@ -1,12 +1,12 @@
-var React = require('react');
-var TodoItem = require('./todo-item');
+import React from 'react';
+import TodoItem from './todo-item';
 
 export default React.createClass({
 
   render: function() {
     return <div>
       {this._renderTodoList()}
-    </div>
+    </div>;
   },
 
   _renderTodoList: function() {

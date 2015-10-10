@@ -1,9 +1,9 @@
-var React = require('react');
-var FireBase = require('firebase');
+import React from 'react';
+import FireBase from 'firebase';
 
-var fbUrl = 'https://scorching-fire-4745.firebaseio.com/';
+const fbUrl = 'https://scorching-fire-4745.firebaseio.com/';
 
-module.exports = React.createClass({
+export default React.createClass({
 
   getInitialState: function() {
     return {
@@ -42,7 +42,7 @@ module.exports = React.createClass({
           Delete
         </button>
       </span>
-    </div>
+    </div>;
   },
 
   _dirtyButton: function() {
@@ -51,14 +51,14 @@ module.exports = React.createClass({
     } else {
       return [
         <button
-          className="btn btn-default"
+          className='btn btn-default'
           onClick={this._onSaveClick}
           >
           Save
         </button>,
         <button
           onClick={this._onUndoClick}
-          className="btn btn-default"
+          className='btn btn-default'
           >
           Undo
         </button>
@@ -67,7 +67,7 @@ module.exports = React.createClass({
   },
 
   _onCheckboxChange: function(e) {
-    var updated = { done: e.target.checked };
+    var updated = {done: e.target.checked};
     this.setState(updated);
     this.fb.update(updated);
   },
@@ -84,8 +84,8 @@ module.exports = React.createClass({
   },
 
   _onSaveClick: function() {
-    this.fb.update({ text: this.state.text });
-    this.setState({ dirt: false });
+    this.fb.update({text: this.state.text});
+    this.setState({dirt: false});
   },
 
   _onUndoClick: function() {
